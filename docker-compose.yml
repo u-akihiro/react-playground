@@ -1,0 +1,9 @@
+version: '3.7'
+services:
+  node:
+    build: ./images/node
+    volumes:
+    - "./workspace:/usr/src/app"
+    command: sh -c "cd react-sample && yarn start"
+    ports:
+      - "3000:3000"
